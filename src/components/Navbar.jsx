@@ -1,18 +1,18 @@
-import { link, NavLink } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
 function Navbar() {
 //dati per navbar 
     const links = [
         {path:'/', label:'homepage'},
-        {path:'/Whoweare' ,label:'/Whoweare'},
-        {path:'/Productlist', label:'/Productlist'},
+        {path:'/who-weare' ,label:'Whoweare'},
+        {path:'/product-list', label:'Our Products'},
     ]
 
   return (
     <>
     <nav className="main-nav">
       <ul>
-        {links.map((link, i)=>(
-          <li id={link.i}>
+        {links.map((link,i)=>(
+          <li key={i}>
             <NavLink to={link.path}>
              {link.label}
             </NavLink>
