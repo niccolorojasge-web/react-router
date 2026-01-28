@@ -14,9 +14,19 @@ function fenchProduct(){
 }
 useEffect(fenchProduct, [])
   return (
-    div
     <>
-     
+     <div className="container-card">
+        {products.map((product)=>(
+        <div className="card" key={product.id}>
+            <p className="title">{product.title}</p>
+            <figure>
+                <img className="img" src={product.image} alt="" />
+            </figure>
+            <p className="price">{product.price}</p>
+            <p className="category">{product.category}</p>
+        </div>   
+        ))}
+     </div>
     </>
   )
 }
