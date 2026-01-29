@@ -24,6 +24,7 @@ useEffect(fenchProduct, [])
             </figure>
             <p className="price">{product.price}</p>
             <p className="category">{product.category}</p>
+            <Link to="/product-list">vai al dettaglio</Link>
         </div>   
         ))}
      </div>

@@ -3,6 +3,7 @@ import Homepage from "./pages/homepage"
 import Whoweare from "./pages/whoweare"
 import Productlist from "./components/productlist"
 import Layout from "./layout/Layout"
+import Productcaracter from "./components/Productcaracter"
 
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
         <Routes>
           <Route element={<Layout/>}>
            <Route index element={<Homepage/>}/>
-           <Route path="/product-list" element={<Productlist/>}/>
            <Route path="/who-weare" element={<Whoweare/>}/>
+           <Route path="/product-list" element={<Productlist/>}/>
+            <Route index element={<Productlist/>}/>
+            <Route path=":id"element={<Productcaracter/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
