@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect} from 'react'
+import { Link } from "react-router-dom";
 const endpoint ="https://fakestoreapi.com/products"
 
 
@@ -24,7 +25,8 @@ useEffect(fenchProduct, [])
             </figure>
             <p className="price">{product.price}</p>
             <p className="category">{product.category}</p>
-            <Link to="/product-list">vai al dettaglio</Link>
+            {/* /product-list/5*/}
+            <Link to={`/product-list/${product.id}`}>vai al dettaglio</Link>
         </div>   
         ))}
      </div>

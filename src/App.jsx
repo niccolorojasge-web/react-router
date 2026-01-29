@@ -12,12 +12,13 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout/>}>
-           <Route index element={<Homepage/>}/>
-           <Route path="/who-weare" element={<Whoweare/>}/>
-           <Route path="/product-list" element={<Productlist/>}/>
-            <Route index element={<Productlist/>}/>
-            <Route path=":id"element={<Productcaracter/>}/>
+          <Route element={<Layout />}>
+            <Route index element={<Homepage />} />
+            <Route path="/who-weare" element={<Whoweare />} />
+            <Route path="/product-list">
+              <Route index element={<Productlist />} />
+              <Route path=":id" element={<Productcaracter />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>
