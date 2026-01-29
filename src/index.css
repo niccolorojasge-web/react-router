@@ -12,3 +12,19 @@ header{
   background-color:cyan;
   height: 3rem;
 }
+
+.container-card{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: white;
+}
+
+  .card{
+  width: calc((100% - 40px) / 3);
+  box-sizing: border-box;
+  background-color: grey;
+}
+.img{
+  width: 100%;
+}
